@@ -1,12 +1,10 @@
 // Assignment code here
-
-
 var chooseChar = function() 
 
 {
 
   // uppercase characters
-  var upperChar = confirm('Would you like to include uppercase characters?');
+  var upperChar = confirm("Would you like to include uppercase characters?");
 
     if (!upperChar) 
     {
@@ -14,26 +12,57 @@ var chooseChar = function()
     } else 
     {
       upperChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-      console.log(upperChar)
     }
 
   // lowercase characters 
-  var lowerChar = confirm('Would you like to include lowercase character?');
+  var lowerChar = confirm("Would you like to include lowercase character?");
+    
+    if (!lowerChar) 
+    {
+      lowerChar = "";
+    } else 
+    {
+      lowerChar = "abcdefghijklmnopqrstuvwxyz";
+    }
 
+    
   // numeric characters
-  var numChar = confirm ('Would you like to include numbers?');
+  var numChar = confirm ("Would you like to include numbers?");
+    if (!numChar) 
+    {
+      numChar = "";
+    } else 
+    {
+      numChar = "0123456789";
+    }
+  
 
   // special characters
-  var specChar = confirm ('Would you like to include special characters?');
+  var specChar = confirm ("Would you like to include special characters?");
 
+    if (!specChar) 
+    {
+      specChar = "";
+    } else 
+    {
+      specChar = "!@#$%*&+=";
+    }
 
-};
+  var passwordString = upperChar + lowerChar + numChar + specChar
+
+    if (passwordString.length > 0) 
+    {
+      return passwordString;
+    } else 
+    {
+      return chooseChar();
+    }
+}
 // generate password function()
 var generatePassword = function() 
 {
-  var lengthPass = prompt('How many characters would you like your password to contain? Please enter a number between "8" and "128".');
-  lengthPass = parseInt(lengthPass);
-  console.log('Password length is ' + lengthPass);
+  var lengthPass = prompt("How many characters would you like your password to contain? Please enter a number between 8 and 128.");
+  console.log("Password length is " + lengthPass);
 
   if (lengthPass < 8 || lengthPass > 128) 
   {
@@ -51,10 +80,7 @@ var generatePassword = function()
   console.log("Password is " + returnPassword);
 
   return returnPassword;
-};
-
-// generate password function
-
+}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
