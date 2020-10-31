@@ -4,6 +4,7 @@
 var chooseChar = function() 
 
 {
+
   // uppercase characters
   var upperChar = confirm('Would you like to include uppercase characters?');
 
@@ -13,11 +14,21 @@ var chooseChar = function()
     } else 
     {
       upperChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      console.log(upperChar)
     }
+
+  // lowercase characters 
+  var lowerChar = confirm('Would you like to include lowercase character?');
+
+  // numeric characters
+  var numChar = confirm ('Would you like to include numbers?');
+
+  // special characters
+  var specChar = confirm ('Would you like to include special characters?');
 
 
 };
-
+// generate password function()
 var generatePassword = function() 
 {
   var lengthPass = prompt('How many characters would you like your password to contain? Please enter a number between "8" and "128".');
