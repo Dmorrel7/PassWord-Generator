@@ -45,7 +45,7 @@ The user can generate a random password by selecting character length and charac
     </li>
     <li>
         The website stackoverflow.
-    <li>
+    </li>
     <li>
         The website W3 Schools.
     </li>
