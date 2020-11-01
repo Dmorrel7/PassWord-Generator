@@ -13,6 +13,8 @@ var chooseChar = function()
     {
       upperChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     }
+    console.log(upperChar);
+
 
   // lowercase characters 
   var lowerChar = confirm("Would you like to include lowercase character?");
@@ -24,6 +26,8 @@ var chooseChar = function()
     {
       lowerChar = "abcdefghijklmnopqrstuvwxyz";
     }
+    console.log(lowerChar);
+
 
     
   // numeric characters
@@ -35,7 +39,7 @@ var chooseChar = function()
     {
       numChar = "0123456789";
     }
-  
+  console.log (numChar);
 
   // special characters
   var specChar = confirm ("Would you like to include special characters?");
@@ -47,16 +51,18 @@ var chooseChar = function()
     {
       specChar = "!@#$%*&+=";
     }
+    console.log(specChar);
 
   var passwordString = upperChar + lowerChar + numChar + specChar
 
     if (passwordString.length > 0) 
     {
       return passwordString;
-    } else 
+    } else
     {
       return chooseChar();
     }
+    console.log(passwordString);
 }
 // generate password function()
 var generatePassword = function() 
@@ -66,7 +72,7 @@ var generatePassword = function()
 
   if (lengthPass < 8 || lengthPass > 128) 
   {
-    return generatePassword();
+    generatePassword();
   }
 
   // creates password on chosen input
@@ -75,7 +81,7 @@ var generatePassword = function()
 
   for (var i = 0; i < lengthPass; i++) 
   {
-    returnPassword = selectPassword[Math.floor(Math.random() * selectPassword.length)];
+    returnPassword += selectPassword[Math.floor(Math.random() * selectPassword.length)];
   }
   console.log("Password is " + returnPassword);
 
